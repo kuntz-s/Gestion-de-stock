@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { RouterProvider } from 'react-router';
+import Router from './router';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   return (
-    <div className="text-primary">App</div>
+    <RouterProvider router={Router}/>
   )
 }
 
