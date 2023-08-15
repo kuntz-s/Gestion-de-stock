@@ -5,17 +5,39 @@ import ModalWrapper from "../baseComponents/ModalWrapper";
 import Input from "../baseComponents/Input";
 import Button from "../baseComponents/Button";
 
-const ClientModal = ({ data,open,isLoading, handleChange, handleClose, handleAdd }) => {
-  const modify = { modifyStatus: false };
+const ClientModal = ({
+  data,
+  open,
+  modify,
+  isLoading,
+  handleChange,
+  handleClose,
+  handleAdd,
+  handleUpdate,
+}) => {
+  const status = modify.status;
+  const modifData = modify.data;
 
-
-  const handleClick=() => {
-    if(!data.nom || !data.prenom || !data.adresse || !data.telephone){
-      toast.error("veuillez remplir tous les champs")
+  const handleClick = () => {
+    if (!data.nom || !data.prenom || !data.adresse || !data.telephone) {
+      toast.error("veuillez remplir tous les champs");
     } else {
-      handleAdd()
+      if (status) {
+        if (
+          modifData.nom === data.nom &&
+          modifData.prenom === data.prenom &&
+          modifData.adresse === data.adresse &&
+          modifData.telephone === data.telephone
+        ) {
+          toast.error("Aucun champ n'a été modifié");
+        } else {
+          handleUpdate();
+        }
+      } else {
+        handleAdd();
+      }
     }
-  }
+  };
 
   return (
     <Modal
@@ -24,11 +46,9 @@ const ClientModal = ({ data,open,isLoading, handleChange, handleClose, handleAdd
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <div className=" absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-white py-4 px-6 rounded-md w-[90vw] md:w-[75vw] lg:w-[50vw]">
+      <div className="outline-none absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-white py-4 px-6 rounded-md w-[90vw] md:w-[75vw] lg:w-[50vw]">
         <ModalWrapper
-          title={
-            !modify.modifyStatus ? "Ajouter un client" : "Modifier un client"
-          }
+          title={!status ? "Ajouter un client" : "Modifier un client"}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -61,15 +81,13 @@ const ClientModal = ({ data,open,isLoading, handleChange, handleClose, handleAdd
 
         <div className="w-full mt-4">
           <Button
-            title={!modify.modifyStatus ? "Ajouter client" : "Modifier client"}
+            title={!status ? "Ajouter client" : "Modifier client"}
             handleClick={handleClick}
             filled={true}
             loading={isLoading}
             className="mx-auto rounded-md px-6 hover:bg-black hover:border-black hover:text-white"
           />
         </div>
-
-        <ToastContainer />
       </div>
     </Modal>
   );

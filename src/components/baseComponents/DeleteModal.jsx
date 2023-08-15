@@ -10,20 +10,20 @@ const DeleteModal = ({ open, data, title, handleClose, handleDelete}) => {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <div className=" absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-white py-4 px-6 rounded-md w-[90vw] md:w-[75vw] lg:w-[50vw]">
+      <div className="outline-none absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-white py-4 px-6 rounded-md w-[90vw] md:w-[75vw] lg:w-[50vw]">
         <ModalWrapper
           title={title}
         />
         <div>
-          <p className="text-center my-2 font-bold uppercase text-lg">Voulez vous vraiment supprimer {data && data.nom}?</p>
-          <div className=" flex justify-center">
+          <p className="text-center my-2 font-medium text-md">Voulez vous vraiment supprimer <span className="font-bold text-primary">{data && data.nom}</span>?</p>
+          <div className=" flex justify-center mt-4">
             <button
-              className="border border-slate-800 py-2 px-6 rounded-md bg-white text-slate-800 mr-4 hover:bg-slate-100 "
+              className="border border-black/90 py-2 px-6 rounded-md bg-white text-black/90 mr-4 hover:bg-black/90 hover:text-white "
               onClick={handleClose}
             >
               Annuler
             </button>
-            <button className="border border-red-500 py-2 px-6 rounded-md bg-red-500 text-white  ml-4 hover:bg-red-400 hover:border-red-400" onClick={handleDelete}>
+            <button className="border border-red-500 py-2 px-6 rounded-md bg-red-500 text-white  ml-4 hover:bg-primary hover:border-primary" onClick={handleDelete}>
               Supprimer
             </button>
           </div>
