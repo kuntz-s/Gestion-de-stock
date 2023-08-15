@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import SidebarMenu from "./layout/sidebar/SidebarMenu";
 import ClientPage from "./pages/client/ClientPage";
+import SupplierPage from "./pages/fournisseur/SupplierPage";
 
 const Router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const Router = createBrowserRouter([
       },
       {
         path: "/fournisseurs",
-        element: <p>Je suuis dans le fournisseur </p>,
+        element: <SupplierPage/>,
       },
       {
         path: "/clients",

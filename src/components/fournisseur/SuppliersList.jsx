@@ -3,7 +3,7 @@ import { BsTrash } from "react-icons/bs";
 import { FiEdit3 } from "react-icons/fi";
 import NotFound from "../baseComponents/NotFound";
 
-const ClientsList = ({ data, openModifyModal, openDeleteModal }) => {
+const SuppliersList = ({ data, openModifyModal, openDeleteModal }) => {
 
  
 
@@ -15,7 +15,6 @@ const ClientsList = ({ data, openModifyModal, openDeleteModal }) => {
         <table className="w-full overflow-scroll border-b border-slate-100 ">
           <tr className="[&>*]:pl-4 [&>*]:bg-[#F8FAFC] [&>*]:text-start [&>*]:text-sm [&>*]:font-medium [&>*]:py-3 [&>*]:text-slate-600">
             <th>Nom</th>
-            <th>Prenom</th>
             <th>Adresse</th>
             <th>Telephone</th>
             <th>Actions</th>
@@ -27,8 +26,6 @@ const ClientsList = ({ data, openModifyModal, openDeleteModal }) => {
                 className="text-start [&>*]:py-4 [&>*]:text-sm [&>*]:text-slate-600 [&>*]:font-medium hover:bg-red-50 [&>*]:pl-4 "
               >
                 <td>{elt.nom}</td>
-                <td>{elt.prenom} </td>
-
                 <td>{elt.adresse} </td>
                 <td>{elt.telephone} </td>
                 <td className="">
@@ -56,4 +53,4 @@ const ClientsList = ({ data, openModifyModal, openDeleteModal }) => {
   );
 };
 
-export default ClientsList;
+export default SuppliersList;
