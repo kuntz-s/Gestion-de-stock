@@ -14,6 +14,12 @@ const sidebarItems = [
   { title: "Clients", link: "clients", icon: <VscPerson  className="scale-[1.5]" /> },
   
   {
+    title: "Fournisseurs",
+    link: "fournisseurs",
+    icon: <RiCaravanLine className="scale-[1.3]" />,
+  },
+  
+  {
     title: "Produits",
     link: "produits",
     icon: <LiaWineBottleSolid className="scale-[1.5]" />,
@@ -22,11 +28,6 @@ const sidebarItems = [
     title: "Commandes",
     link: "commandes",
     icon: <BiStore className="scale-[1.3]"/>,
-  },
-  {
-    title: "Fournisseurs",
-    link: "fournisseurs",
-    icon: <RiCaravanLine className="scale-[1.3]" />,
   },
 ];
 

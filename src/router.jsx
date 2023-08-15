@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import SidebarMenu from "./layout/sidebar/SidebarMenu";
+import ProductPage from "./pages/produit/ProductPage";
 import ClientPage from "./pages/client/ClientPage";
 import SupplierPage from "./pages/fournisseur/SupplierPage";
 
@@ -19,7 +20,7 @@ const Router = createBrowserRouter([
       },
       {
         path: "/produits",
-        element: <p>Je suuis dans le produit </p>,
+        element: <ProductPage/>,
       },
       {
         path: "/fournisseurs",

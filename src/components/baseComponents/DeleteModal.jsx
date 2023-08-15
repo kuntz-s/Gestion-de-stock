@@ -18,7 +18,7 @@ const DeleteModal = ({ open, data, title, handleClose, handleDelete}) => {
           <p className="text-center my-2 font-medium text-md">Voulez vous vraiment supprimer <span className="font-bold text-primary">{data && data.nom}</span>?</p>
           <div className=" flex justify-center mt-4">
             <button
-              className="border border-black/90 py-2 px-6 rounded-md bg-white text-black/90 mr-4 hover:bg-black/90 hover:text-white "
+              className="border border-slate-900/90 py-2 px-6 rounded-md bg-white text-slate-900/90 mr-4 hover:bg-slate-900/90 hover:text-white "
               onClick={handleClose}
             >
               Annuler

@@ -78,7 +78,7 @@ const SupplierModal = ({
             handleClick={handleClick}
             filled={true}
             loading={isLoading}
-            className="mx-auto rounded-md px-6 hover:bg-black hover:border-black hover:text-white"
+            className="mx-auto rounded-md px-6 hover:bg-slate-900 hover:border-slate-900 hover:text-slate-900"
           />
         </div>
       </div>

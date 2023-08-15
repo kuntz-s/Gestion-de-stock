@@ -1,5 +1,4 @@
-import react, { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import react, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import {
   BsFillArrowRightCircleFill,
@@ -9,12 +8,6 @@ import Sidebar from "./Sidebar";
 
 const SidebarMenu = () => {
   const [shrink, setShrink] = useState(false);
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  useEffect(() =>{
-    
-  }, [])
 
   return (
     <section className="flex min-h-screen  ">

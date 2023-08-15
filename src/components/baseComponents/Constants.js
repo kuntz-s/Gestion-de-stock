@@ -1,0 +1,17 @@
+export const getMonthName = (num) => {
+    switch(num){
+        case 0: return "Janvier"; break;
+        case 1: return "Fevrier"; break;
+        case 2: return "Mars"; break;
+        case 3: return "Avril"; break;
+        case 4: return "Mai"; break;
+        case 5: return "Juin"; break;
+        case 6: return "Juillet"; break;
+        case 7: return "Août"; break;
+        case 8: return "Septembre"; break;
+        case 9: return "Octobre"; break;
+        case 10: return "Novembre"; break;
+        case 11: return "Decembre"; break;
+        default:return "err"; break
+    }
+}
