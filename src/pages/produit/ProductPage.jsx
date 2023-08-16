@@ -117,7 +117,7 @@ const ProductPage = () => {
   const csvExporter = new ExportToCsv(csvOptions);
 
   const exportData = () => {
-    csvExporter.generateCsv(suppliers);
+    csvExporter.generateCsv(products);
   };
 
   const openDeleteModal = (data) => {

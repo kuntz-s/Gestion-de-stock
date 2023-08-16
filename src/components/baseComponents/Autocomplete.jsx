@@ -30,11 +30,10 @@ const filterOptions = (options, state) => {
   return (
     <Autocomplete
     filterOptions={filterOptions}
-      freeSolo
-      disableClearable={true}
+    id="controllable-states-demo"
       options={dataList}
       value={value}
-      onInputChange={(e, newInputValue) => {
+      onChange={(e, newInputValue) => {
         handleChange(newInputValue);
       }}
       sx={{ width: "100%" }}

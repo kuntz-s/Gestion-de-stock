@@ -3,6 +3,8 @@ import SidebarMenu from "./layout/sidebar/SidebarMenu";
 import ProductPage from "./pages/produit/ProductPage";
 import ClientPage from "./pages/client/ClientPage";
 import SupplierPage from "./pages/fournisseur/SupplierPage";
+import CommandPage from "./pages/commande/CommandPage";
+import DashboardPage from "./pages/dashboard/DashboardPage";
 
 const Router = createBrowserRouter([
   {
@@ -12,11 +14,7 @@ const Router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <p>Je m'appelle nchouwet mfouapon kuntz stephane</p>,
-      },
-      {
-        path: "/dashboard",
-        element: <p>Je suuis dans le  dashboard </p>,
+        element: <DashboardPage/>,
       },
       {
         path: "/produits",
@@ -32,7 +30,7 @@ const Router = createBrowserRouter([
       },
       {
         path: "/commandes",
-        element: <p>Je suuis dans le commande </p>,
+        element: <CommandPage/>,
       }
     ],
   },

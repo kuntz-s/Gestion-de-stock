@@ -15,3 +15,19 @@ export const getMonthName = (num) => {
         default:return "err"; break
     }
 }
+
+
+ 
+export const verifyDuplicate = ( commands)=>{
+    let duplicate = false;
+    let temp = [];
+    for(let com of commands){
+      const verif = temp.find(elt => elt.produit === com.produit);
+      if(verif){
+        duplicate = true;
+        break;
+      } 
+      temp.push(com);
+    }
+    return duplicate;
+}

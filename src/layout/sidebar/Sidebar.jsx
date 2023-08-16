@@ -10,7 +10,7 @@ import logo from "../../assets/logo.png";
 import logoShrink from "../../assets/logoShrink.png";
 
 const sidebarItems = [
-  { title: "Dashboard", link: "dashboard", icon: <MdOutlineDashboard  className="scale-[1.3] translate-y-[-2px]" /> },
+  { title: "Dashboard", link: "", icon: <MdOutlineDashboard  className="scale-[1.3] translate-y-[-2px]" /> },
   { title: "Clients", link: "clients", icon: <VscPerson  className="scale-[1.5]" /> },
   
   {
