@@ -47,6 +47,10 @@ const CommandModal = ({
             toast.error("Veuillez renseigner tous les produits")
             return;
           } 
+          if(pro.quantite < 1){
+            toast.error("La quantité minimale dois ètre de 1");
+            return;
+          }
           const verifyProduit = products.find(elt => elt.nom === pro.produit);
           if(!verifyProduit){
             toast.error("produit "+pro.produit+ "iconnu");

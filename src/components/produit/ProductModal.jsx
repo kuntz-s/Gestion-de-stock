@@ -27,9 +27,11 @@ const ProductModal = ({
       !data.qteStock ||
       !data.prix ||
       !data.prixGros ||
-      !data.fournisseur
+      !data.fournisseur 
     ) {
       toast.error("veuillez remplir tous les champs");
+    } else if (data.qteStock < 1 || data.prix < 1 || data.prixGros<1){
+      toast.error("la quantité en stock et les prix dois être au minimum 1")
     } else {
       if (status) {
         if (
